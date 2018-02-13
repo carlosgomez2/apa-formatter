@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <!-- Components -->
+    <NavBar></NavBar>
+    <Sidebar v-bind:formatsAvailable="formatsAvailable"></Sidebar>
     <Book v-bind:dataBook="dataBook"></Book>
     <Magazine v-bind:dataMagazine="dataMagazine"></Magazine>
     <Newspapper v-bind:dataNewspapper="dataNewspapper"></Newspapper>
@@ -11,6 +13,8 @@
 
 <script>
 /* Import components here */
+import NavBar from './components/MenuNavBar.vue'
+import Sidebar from './components/Sidebar.vue'
 import Book from './components/Book.vue'
 import Magazine from './components/Magazine.vue'
 import Newspapper from './components/Newspapper.vue'
@@ -19,6 +23,8 @@ import Encyclopedia from './components/Encyclopedia.vue'
 export default {
   name: 'App',
   components: {
+    NavBar,
+    Sidebar,
     Book,
     Magazine,
     Newspapper,
@@ -61,12 +67,18 @@ export default {
         pages: '',
         encyclopediaPublicationPlace: '',
         editorial: ''
+      },
+      formatsAvailable: {
+        book: 'Book',
+        magazine: 'Magazine',
+        newspapper: 'Newspapper',
+        encyclopedia: 'Enciclopedia'
       }
     }
   }
 }
 </script>
 
-<style scoped>
-  /* Styles here */
+<style lang="sass">
+  @import 'assets/main.sass'
 </style>

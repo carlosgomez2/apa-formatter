@@ -2,6 +2,8 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import Spectre from 'spectre.css'
+import SpectreIcons from 'spectre.css/dist/spectre-icons.css'
 
 Vue.config.productionTip = false
 

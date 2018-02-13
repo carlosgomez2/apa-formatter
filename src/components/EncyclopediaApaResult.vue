@@ -1,11 +1,13 @@
 <template>
-  <div v-show="dataEncyclopedia.complete">
-    <h4>
-      Apa Format: 
-    </h4>
-    <p ref="text">{{dataEncyclopedia.author}}. {{dataEncyclopedia.publishedYear}}. {{dataEncyclopedia.titleOfArticle}}. In {{dataEncyclopedia.nameOfEncyclopedia}} ({{dataEncyclopedia.volume}}, {{dataEncyclopedia.pages}}). {{dataEncyclopedia.encyclopediaPublicationPlace}}: {{dataEncyclopedia.editorial}}.</p>
-    <button class="btn" v-on:click="copyToClipboard">Copy to clipboard</button>
-  </div>
+  <transition name="fade">
+    <div v-show="dataEncyclopedia.complete">
+      <h4>
+        Apa Format: 
+      </h4>
+      <p ref="text">{{dataEncyclopedia.author}}. {{dataEncyclopedia.publishedYear}}. {{dataEncyclopedia.titleOfArticle}}. In {{dataEncyclopedia.nameOfEncyclopedia}} ({{dataEncyclopedia.volume}}, {{dataEncyclopedia.pages}}). {{dataEncyclopedia.encyclopediaPublicationPlace}}: {{dataEncyclopedia.editorial}}.</p>
+      <button class="btn" v-on:click="copyToClipboard">Copy to clipboard</button>
+    </div>
+  </transition>
 </template>
 
 <script>
