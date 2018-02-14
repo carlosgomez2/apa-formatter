@@ -5,7 +5,7 @@
       <h4>
         Apa Format:
       </h4>
-      <p ref="text">{{dataMagazine.author}}. ({{dataMagazine.date}}). {{dataMagazine.titleOfArticle}}. {{dataMagazine.nameOfMagazine}}, {{dataMagazine.volume}}, {{dataMagazine.pages}}.</p>
+      <p ref="text"><mark>{{dataMagazine.author}}. ({{dataMagazine.date}}). {{dataMagazine.titleOfArticle}}. {{dataMagazine.nameOfMagazine}}, {{dataMagazine.volume}}, {{dataMagazine.pages}}.</mark></p>
       <button class="btn" v-on:click="copyToClipboard">Copy to clipboard</button>
     </div>
   </transition>

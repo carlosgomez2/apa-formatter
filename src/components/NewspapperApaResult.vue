@@ -1,10 +1,11 @@
 <template>
   <transition name="fade">
     <div v-show="dataNewspapper.complete">
+      <br />
       <h4>
         Apa Format: 
       </h4>
-      <p ref="text">{{dataNewspapper.author}}. ({{dataNewspapper.date}}). {{dataNewspapper.titleOfArticle}}. {{dataNewspapper.nameOfNewspapper}}, {{dataNewspapper.pages}}.</p>
+      <p ref="text"><mark>{{dataNewspapper.author}}. ({{dataNewspapper.date}}). {{dataNewspapper.titleOfArticle}}. {{dataNewspapper.nameOfNewspapper}}, {{dataNewspapper.pages}}.</mark></p>
       <button class="btn" v-on:click="copyToClipboard">Copy to clipboard</button>
     </div>
   </transition>
