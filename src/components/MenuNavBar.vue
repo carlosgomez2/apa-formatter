@@ -1,7 +1,22 @@
 <template>
   <div class="navbar">
     <section class="navbar-section">
-      <a class="btn btn-link btn-lg"><i class="icon icon-menu"></i></a>
+      
+    <a class="btn btn-link btn-lg" v-on:click="showSidebar"><i class="icon icon-menu"></i></a>
+
+    <div class="sidebar-container" id="sidebar">
+      <a class="btn close" v-on:click="hideSidebar"><i class="icon icon-arrow-left"></i></a>
+      
+      <ul>
+        <li><a href="#book">Book</a></li>
+        <li><a href="#magazine">Magazine</a></li>
+        <li><a href="#newspapper">Newspapper</a></li>
+        <li><a href="#encyclopedia">Encyclopedia</a></li>
+      </ul>
+
+      <b class="sidebar-footer">&copy; Apa Formatter</b>
+    </div>
+
     </section>
     <section class="navbar-center">
       <a href="#" class="btn btn-link">
@@ -15,36 +30,93 @@
 </template>
 
 <script>
+
 export default {
   name: 'MenuNavBar',
   data() {
-    return { }
+    return {
+    }
   },
   methods: {
-    computedTransform: function(event) {
-      this.transform = 'translateX(0%)'
+    showSidebar: function() {
+      let sidebar = document.getElementById("sidebar")
+      sidebar.classList.add("active")
+    },
+    hideSidebar: function() {
+      let sidebar = document.getElementById("sidebar")
+      sidebar.classList.remove("active")
     }
   }
 }
 </script>
 
 <style lang="sass" scoped>
-  /* Styles here */
-  section
-    height: 3em
-    background: rgba(248, 249, 250, .65)
+/* Styles here */
+section
+  height: 3em
+  background: rgba(248, 249, 250, .65)
 
-  .navbar
-    position: sticky
-    height: 3.8rem
-    top: 0
-    z-index: 200
+.navbar
+  position: sticky
+  height: 3.8rem
+  top: 0
+  z-index: 200
+  width: 100%
+
+.btn-nav
+  padding-right: 20px
+
+.btn-link
+  padding-left: 20px
+
+.sidebar-container
+  background: #f8f9fa
+  width: 250px
+  height: 100vh
+  z-index: 500
+  position: absolute
+  top: 0
+  /* Flex properties */
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap 
+
+  justify-content: space-between
+  align-items: flex-start
+  align-content: center
+
+  transition: all .5s ease-in-out
+  transform: translateX(-100%)
+
+.active
+  transition: all 0.5s ease-in-out
+  transform: translateX(0%)
+
+.close 
+  margin: 12px 12px 9px 20px
+
+.sidebar-footer
+  margin: 0 auto
+  padding-bottom: 9px
+
+ul 
+  margin: 2px 0
+  width: 100%
+  li 
+    list-style-type: none
+    text-align: center
+    margin: 0
     width: 100%
-
-  .btn-nav
-    padding-right: 20px
-
-  .btn-link
-    padding-left: 20px
+    line-height: 3.5rem
+    a 
+      text-transform: uppercase
+      display: block
+      &:hover 
+        text-decoration: none
+        font-weigth: bold
+        border: .05rem solid #5755d9
+        color: #5755d9
+        font-size: .8rem
+        background: #f1f1fc
 
 </style>
