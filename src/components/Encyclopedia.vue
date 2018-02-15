@@ -55,6 +55,11 @@ export default {
 }
 </script>
 
-<style scoped>
-  
+<style lang="sass" scoped>
+  $space: 200px
+
+  section 
+    height: -webkit-calc(100vh + #{$space})
+    height:    -moz-calc(100vh + #{$space})
+    height:         calc(100vh + #{$space})
 </style>

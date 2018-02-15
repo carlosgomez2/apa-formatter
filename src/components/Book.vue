@@ -46,6 +46,7 @@ export default {
 }
 </script>
 
-<style scoped>
-  /* Styles here */
+<style lang="sass" scoped>
+  section 
+    margin-top: -48px !important
 </style>

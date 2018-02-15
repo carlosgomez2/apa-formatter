@@ -6,7 +6,7 @@
         Apa Format: 
       </h4>
       <p ref="text"><mark>{{dataEncyclopedia.author}}. {{dataEncyclopedia.publishedYear}}. {{dataEncyclopedia.titleOfArticle}}. In {{dataEncyclopedia.nameOfEncyclopedia}} ({{dataEncyclopedia.volume}}, {{dataEncyclopedia.pages}}). {{dataEncyclopedia.encyclopediaPublicationPlace}}: {{dataEncyclopedia.editorial}}.</mark></p>
-      <button class="btn" v-on:click="copyToClipboard">Copy to clipboard</button>
+      <button class="btn space" v-on:click="copyToClipboard">Copy to clipboard</button>
     </div>
   </transition>
 </template>
@@ -32,6 +32,9 @@ export default {
 }
 </script>
 
-<style scoped>
-  /* Styles here */
+<style lang="sass" scoped>
+$space: 200px
+
+.space 
+  margin-bottom: $space
 </style>

@@ -50,6 +50,5 @@ export default {
 }
 </script>
 
-<style scoped>
-  /* Styles here */
+<style lang="sass" scoped>
 </style>

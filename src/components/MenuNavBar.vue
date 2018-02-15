@@ -2,16 +2,16 @@
   <div class="navbar">
     <section class="navbar-section">
       
-    <a class="btn btn-link btn-lg" v-on:click="showSidebar"><i class="icon icon-menu"></i></a>
+    <a class="btn btn-link btn-lg btn-menu" v-on:click="showSidebar"><i class="icon icon-menu"></i></a>
 
     <div class="sidebar-container" id="sidebar">
       <a class="btn close" v-on:click="hideSidebar"><i class="icon icon-arrow-left"></i></a>
       
       <ul>
-        <li><a href="#book">Book</a></li>
-        <li><a href="#magazine">Magazine</a></li>
-        <li><a href="#newspapper">Newspapper</a></li>
-        <li><a href="#encyclopedia">Encyclopedia</a></li>
+        <li><a href="#book" v-on:click="hideSidebar">Book</a></li>
+        <li><a href="#magazine" v-on:click="hideSidebar">Magazine</a></li>
+        <li><a href="#newspapper" v-on:click="hideSidebar">Newspapper</a></li>
+        <li><a href="#encyclopedia" v-on:click="hideSidebar">Encyclopedia</a></li>
       </ul>
 
       <b class="sidebar-footer">&copy; Apa Formatter</b>
@@ -53,21 +53,27 @@ export default {
 <style lang="sass" scoped>
 /* Styles here */
 section
-  height: 3em
+  height: 3em !important
+  padding: 0
   background: rgba(248, 249, 250, .65)
 
 .navbar
   position: sticky
-  height: 3.8rem
   top: 0
   z-index: 200
   width: 100%
 
-.btn-nav
-  padding-right: 20px
+.navbar-center
+  margin: 0 3px
 
-.btn-link
-  padding-left: 20px
+.btn-primary
+  margin-right: 10px
+
+.btn-menu
+  margin-left: 10px
+  &:hover, &:focus
+    background: #f1f1fc
+    border-color: #4b48d6
 
 .sidebar-container
   background: #f8f9fa
