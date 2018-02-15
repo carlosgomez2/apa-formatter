@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import Spectre from 'spectre.css'
 import SpectreIcons from 'spectre.css/dist/spectre-icons.css'
+import Clipboard from 'clipboard/dist/clipboard.js'
 
 Vue.config.productionTip = false
 
@@ -13,3 +14,5 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+console.log('Is clipboard.js supported?: ' + Clipboard.isSupported())
