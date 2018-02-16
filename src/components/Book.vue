@@ -27,7 +27,12 @@
 import BookApaResult from './BookApaResult.vue'
 
 export default {
-  props: ['dataBook'],
+  props: {
+    dataBook: {
+      type: Object,
+      require: true
+    }
+  },
   name: 'Book',
   components: {
     BookApaResult

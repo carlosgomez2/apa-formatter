@@ -12,6 +12,7 @@
         <li><a href="#magazine" v-on:click="hideSidebar">Magazine</a></li>
         <li><a href="#newspapper" v-on:click="hideSidebar">Newspapper</a></li>
         <li><a href="#encyclopedia" v-on:click="hideSidebar">Encyclopedia</a></li>
+        <li><a href="#web" v-on:click="hideSidebar">Web</a></li>
       </ul>
 
       <b class="sidebar-footer">&copy; Apa Formatter</b>

@@ -6,6 +6,7 @@
     <Magazine v-bind:dataMagazine="dataMagazine"></Magazine>
     <Newspapper v-bind:dataNewspapper="dataNewspapper"></Newspapper>
     <Encyclopedia v-bind:dataEncyclopedia="dataEncyclopedia"></Encyclopedia>
+    <Web v-bind:dataWeb="dataWeb"></Web>
 
   </div>
 </template>
@@ -17,6 +18,7 @@ import Book from './components/Book.vue'
 import Magazine from './components/Magazine.vue'
 import Newspapper from './components/Newspapper.vue'
 import Encyclopedia from './components/Encyclopedia.vue'
+import Web from './components/Web.vue'
 
 export default {
   name: 'App',
@@ -25,7 +27,8 @@ export default {
     Book,
     Magazine,
     Newspapper,
-    Encyclopedia
+    Encyclopedia,
+    Web
   },
   data() {
     return {
@@ -64,6 +67,15 @@ export default {
         pages: '',
         encyclopediaPublicationPlace: '',
         editorial: ''
+      },
+      dataWeb: {
+        complete: false,
+        author: '',
+        publishedYear: '',
+        title: '',
+        dateRecoveryDocument: '',
+        publishedBy: '',
+        url: ''
       }
     }
   }
