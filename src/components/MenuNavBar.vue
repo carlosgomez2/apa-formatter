@@ -21,7 +21,7 @@
     </section>
     <section class="navbar-center">
       <a href="#" class="btn btn-link">
-        <b>Apa Formatter</b>
+        <b class="apa-title">Apa Formatter</b>
       </a>
     </section>
     <section class="navbar-section btn-nav">
@@ -105,6 +105,12 @@ section
 .sidebar-footer
   margin: 0 auto
   padding-bottom: 9px
+  text-transform: uppercase
+
+.apa-title
+  text-transform: capitalize
+  font-weight: bold
+  font-size: 1rem
 
 ul 
   margin: 2px 0
