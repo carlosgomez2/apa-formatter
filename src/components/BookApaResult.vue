@@ -5,8 +5,8 @@
       <h4>
         Apa Format:
       </h4>
-      <p id="result"><mark>{{dataBook.author}}. ({{dataBook.publishedYear}}). {{dataBook.bookTitle}}. {{dataBook.publishedIn}}: {{dataBook.editorial}}.</mark></p>
-      <button class="btn" data-clipboard-target="#result">Copy to clipboard</button>
+      <p id="resultBook"><mark>{{dataBook.author}}. ({{dataBook.publishedYear}}). {{dataBook.bookTitle}}. {{dataBook.publishedIn}}: {{dataBook.editorial}}.</mark></p>
+      <button class="btn bookTooltip " id="copy" data-clipboard-target="#resultBook" type="button" data-tooltip="Copied!" v-on:click="showTooltip">Copy to clipboard</button>
     </div>
   </transition>
 </template>
@@ -24,10 +24,9 @@ export default {
     return { }
   },
   methods: {
-    copyToClipboard: function(){
-      let text = document.querySelector('#apa-result')
-      text[0].select()
-      document.execCommand('copy')
+    showTooltip: function() {
+      let buttonBook = document.querySelector('.bookTooltip')
+      buttonBook.classList.add('tooltip', 'tooltip-right')
     }
   }
 }

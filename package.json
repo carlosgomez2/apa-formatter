@@ -10,9 +10,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "clipboard": "^1.7.1",
+    "clipboard": "^1.5.12",
     "spectre.css": "^0.5.0",
-    "vue": "^2.5.2"
+    "vue": "^2.5.2",
+    "vue-i18n": "^7.4.2"
   },
   "devDependencies": {
     "autoprefixer": "^8.0.0",

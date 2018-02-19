@@ -5,8 +5,8 @@
       <h4>
         Apa Format:
       </h4>
-      <p ref="text"><mark>{{dataMagazine.author}}. ({{dataMagazine.date}}). {{dataMagazine.titleOfArticle}}. {{dataMagazine.nameOfMagazine}}, {{dataMagazine.volume}}, {{dataMagazine.pages}}.</mark></p>
-      <button class="btn" v-on:click="copyToClipboard">Copy to clipboard</button>
+      <p id="resultMagazine"><mark>{{dataMagazine.author}}. ({{dataMagazine.date}}). {{dataMagazine.titleOfArticle}}. {{dataMagazine.nameOfMagazine}}, {{dataMagazine.volume}}, {{dataMagazine.pages}}.</mark></p>
+      <button class="btn magazineTooltip " id="copy" data-clipboard-target="#resultMagazine" type="button" data-tooltip="Copied!" v-on:click="showTooltip">Copy to clipboard</button>
     </div>
   </transition>
 </template>
@@ -24,14 +24,14 @@ export default {
     return { }
   },
   methods: {
-    copyToClipboard: function(){
-      this.$refs.text.select()
-      document.execCommand('copy')
+    showTooltip: function() {
+      let buttonMagazine = document.querySelector(".magazineTooltip")
+      buttonMagazine.classList.add('tooltip', 'tooltip-right')
     }
   }
 }
 </script>
 
-<style scoped>
+<style lang="sass" scoped>
   /* Styles here */
 </style>

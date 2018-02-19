@@ -5,8 +5,8 @@
       <h4>
         Apa Format:
       </h4>
-      <p id="result"><mark>{{dataWeb.author}}. ({{dataWeb.publishedYear}}). {{dataWeb.title}}. {{dataWeb.dateRecoveryDocument}}, of  {{dataWeb.publishedBy}} Website: {{dataWeb.url}}.</mark></p>
-      <button class="btn" data-clipboard-target="#result">Copy to clipboard</button>
+      <p id="resultWeb"><mark>{{dataWeb.author}}. ({{dataWeb.publishedYear}}). {{dataWeb.title}}. {{dataWeb.dateRecoveryDocument}}, of  {{dataWeb.publishedBy}} Website: {{dataWeb.url}}.</mark></p>
+      <button class="btn webTooltip" id="copy" data-clipboard-target="#resultWeb" type="button" data-tooltip="Copied!" v-on:click="showTooltip">Copy to clipboard</button>
     </div>
   </transition>
 </template>
@@ -24,10 +24,9 @@ export default {
     return { }
   },
   methods: {
-    copyToClipboard: function(){
-      let text = document.querySelector('#apa-result')
-      text[0].select()
-      document.execCommand('copy')
+    showTooltip: function() {
+      let buttonMagazine = document.querySelector(".webTooltip")
+      buttonMagazine.classList.add('tooltip', 'tooltip-right')
     }
   }
 }

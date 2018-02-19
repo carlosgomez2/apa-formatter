@@ -5,8 +5,8 @@
       <h4>
         Apa Format: 
       </h4>
-      <p ref="text"><mark>{{dataEncyclopedia.author}}. {{dataEncyclopedia.publishedYear}}. {{dataEncyclopedia.titleOfArticle}}. In {{dataEncyclopedia.nameOfEncyclopedia}} ({{dataEncyclopedia.volume}}, {{dataEncyclopedia.pages}}). {{dataEncyclopedia.encyclopediaPublicationPlace}}: {{dataEncyclopedia.editorial}}.</mark></p>
-      <button class="btn space" v-on:click="copyToClipboard">Copy to clipboard</button>
+      <p id="resultEncyclopedia"><mark>{{dataEncyclopedia.author}}. {{dataEncyclopedia.publishedYear}}. {{dataEncyclopedia.titleOfArticle}}. In {{dataEncyclopedia.nameOfEncyclopedia}} ({{dataEncyclopedia.volume}}, {{dataEncyclopedia.pages}}). {{dataEncyclopedia.encyclopediaPublicationPlace}}: {{dataEncyclopedia.editorial}}.</mark></p>
+      <button class="btn encyclopediaTooltip " id="copy" data-clipboard-target="#resultEncyclopedia" type="button" data-tooltip="Copied!" v-on:click="showTooltip">Copy to clipboard</button>
     </div>
   </transition>
 </template>
@@ -24,9 +24,9 @@ export default {
     return { }
   },
   methods: {
-    copyToClipboard: function(){
-      this.$refs.text.select()
-      document.execCommand('copy')
+    showTooltip: function() {
+      let buttonMagazine = document.querySelector(".encyclopediaTooltip")
+      buttonMagazine.classList.add('tooltip', 'tooltip-right')
     }
   }
 }
