@@ -25,7 +25,7 @@
       </a>
     </section>
     <section class="navbar-section btn-nav">
-      <a class="btn btn-primary" href="https://github.com" target="_blank">Github</a>
+      <a class="btn btn-primary" href="https://github.com/carlosgomez2/apa-formatter" target="_blank">Github</a>
     </section>
   </div>
 </template>
