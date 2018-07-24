@@ -1,12 +1,12 @@
 <template>
   <div class="navbar">
     <section class="navbar-section">
-      
+
     <a class="btn btn-link btn-lg btn-menu" v-on:click="showSidebar"><i class="icon icon-menu"></i></a>
 
     <div class="sidebar-container" id="sidebar">
       <a class="btn close" v-on:click="hideSidebar"><i class="icon icon-arrow-left"></i></a>
-      
+
       <ul>
         <li><a href="#book" v-on:click="hideSidebar">Book</a></li>
         <li><a href="#magazine" v-on:click="hideSidebar">Magazine</a></li>
@@ -86,7 +86,7 @@ section
   /* Flex properties */
   display: flex
   flex-direction: column
-  flex-wrap: wrap 
+  flex-wrap: wrap
 
   justify-content: space-between
   align-items: flex-start
@@ -99,7 +99,7 @@ section
   transition: all 0.5s ease-in-out
   transform: translateX(0%)
 
-.close 
+.close
   margin: 12px 12px 9px 20px
 
 .sidebar-footer
@@ -112,19 +112,19 @@ section
   font-weight: bold
   font-size: 1rem
 
-ul 
+ul
   margin: 2px 0
   width: 100%
-  li 
+  li
     list-style-type: none
     text-align: center
     margin: 0
     width: 100%
     line-height: 3.5rem
-    a 
+    a
       text-transform: uppercase
       display: block
-      &:hover 
+      &:hover
         text-decoration: none
         font-weigth: bold
         border: .05rem solid #5755d9

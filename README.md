@@ -1,6 +1,10 @@
-# apa-format
+# apa-formatter
 
 > A simple Apa Formatter for Books, Magazine, Encyclopedia, Newspapper and Web.
+
+### SITE
+
+Hosted on Github Pages: [Apa Formatter](https://carlosgomez2.github.io/apa-formatter/)
 
 ## Build Setup
 
@@ -16,12 +20,18 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
+
+# if error to compile
+rm -rf node_modules && npm install
+
+# security audit
+npm audit 
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 ## Contributing
- 
+
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
 3. Commit your changes: `git commit -am 'Add some feature'`
@@ -29,7 +39,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 5. Submit a pull request :D
 
 ## License
- 
+
 The MIT License (MIT)
 
 Copyright (c) 2018 Carlos Gómez
