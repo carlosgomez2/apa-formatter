@@ -26,6 +26,17 @@ rm -rf node_modules && npm install
 
 # security audit
 npm audit
+
+# Steps to serve from gh pages:
+  npm run build
+  # change name folder 'dist' to 'docs'
+  # go to 'docs' folder
+  # open index.html and remove '/' in the beginning of every script and link tag's 'src' attribute
+  git push origin master
+  # go to repo settings
+  # scroll to Github Pages settings
+  # change 'source' to 'master branch/docs folder'
+  # if change required, repeat every step
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
