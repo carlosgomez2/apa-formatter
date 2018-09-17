@@ -6,6 +6,16 @@
 
 Hosted on Github Pages: [Apa Formatter](https://carlosgomez2.github.io/apa-formatter/)
 
+### SCREENSHOTS
+
+![](frame-apa-web.png)
+
+![](frame-apa-menu.png)
+
+![](frame-apa-book.png)
+
+![](frame-apa-magazine.png)
+
 ## Build Setup
 
 ``` bash
